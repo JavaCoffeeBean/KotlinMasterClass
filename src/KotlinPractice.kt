@@ -1,13 +1,19 @@
 fun main() {
-    val fName: String = "Kingsley"
-    var temp: Int = 98
-    val height: Float = 5.5f
-    var gpa: Double = 3.1
-    val answerChoice: Char = 'c'
-    println("This is Kotlin.")
-    favCar()
+    val carBrands: Array<String> = arrayOf("Audi","BMW","Mazda","Toyota","Jeep","Honda","Volvo")
+    carBrands[0] = "Ferrari"
+
+    println(carBrands[0])
+
+    favCar(carBrands[4])
+
+    var middleBrand: Int = ((carBrands.size - 1) / 2).toInt()
+
+    println("${carBrands[0]} is the first car brand")
+    println("${carBrands[middleBrand]} is the middle brand")
+    println("${carBrands[carBrands.size - 1]} is the last car brand")
+
 }
 
-fun favCar() {
-    println("Audi is my favorite car brand")
+fun favCar(brandName: String) {
+    println("$brandName is my favorite car brand")
 }
